@@ -1,0 +1,110 @@
+📌 Basic Excel Formulas
+
+SUM → Adds numbers in a range.
+=SUM(A1:A5) → Adds values from A1 to A5.
+
+AVERAGE → Finds the average of numbers.
+=AVERAGE(A1:A5) → Calculates the average of A1 to A5.
+
+MIN / MAX → Finds the smallest/largest value in a range.
+
+=MIN(A1:A5) → Smallest value in A1 to A5.
+=MAX(A1:A5) → Largest value in A1 to A5.
+COUNT → Counts how many numbers are in a range.
+=COUNT(A1:A10) → Counts numeric values only.
+
+COUNTA → Counts both numbers and text (non-empty cells).
+=COUNTA(A1:A10)
+
+IF → Applies a condition.
+=IF(A1>50, "Pass", "Fail") → If A1 is greater than 50, returns "Pass", otherwise "Fail".
+------------------------------------------------------------------------------------------------------------------
+📌 Intermediate Excel Formulas
+
+COUNTIF → Counts cells based on a condition.
+=COUNTIF(A1:A10, ">50") → Counts values greater than 50.
+
+SUMIF → Adds numbers based on a condition.
+=SUMIF(A1:A10, ">50") → Adds values greater than 50.
+
+VLOOKUP → Finds a value in a table (vertical lookup).
+=VLOOKUP(101, A2:C10, 2, FALSE)
+
+Looks for 101 in column A and returns the corresponding value from the 2nd column.
+HLOOKUP → Works like VLOOKUP but searches horizontally.
+=HLOOKUP(101, A1:J2, 2, FALSE)
+
+INDEX → Returns a value from a specific row and column.
+=INDEX(A2:C5, 2, 3) → Returns the value in 2nd row, 3rd column.
+
+MATCH → Returns the position of a value.
+=MATCH(50, A1:A10, 0) → Finds 50 in A1:A10 and returns its position.
+
+TEXT → Formats numbers as text.
+=TEXT(A1, "MM/DD/YYYY") → Converts A1 into date format.
+
+LEFT / RIGHT / MID → Extracts text from a cell.
+
+=LEFT(A1, 3) → Gets the first 3 characters.
+=RIGHT(A1, 3) → Gets the last 3 characters.
+=MID(A1, 2, 3) → Extracts 3 characters from the 2nd position.
+
+LEN → Counts the number of characters in a cell.
+=LEN(A1)
+
+TRIM → Removes extra spaces from text.
+=TRIM(A1)
+
+CONCATENATE (or CONCAT) → Joins text from different cells.
+
+Old: =CONCATENATE(A1, " ", B1)
+New: =CONCAT(A1, " ", B1)
+------------------------------------------------------------------------------------------------------------------
+📌 Advanced Excel Formulas
+
+XLOOKUP → A better version of VLOOKUP & HLOOKUP.
+=XLOOKUP(101, A2:A10, B2:B10, "Not Found")
+
+Finds 101 in column A and returns the corresponding value from column B.
+IFERROR → Handles errors in formulas.
+=IFERROR(A1/B1, "Error!")
+
+If B1 is 0, it returns "Error!" instead of an error message.
+ARRAYFORMULA → Allows applying formulas to multiple cells at once (used in Google Sheets).
+
+TRANSPOSE → Converts rows to columns (or vice versa).
+=TRANSPOSE(A1:A5)
+
+TEXTJOIN → Joins text with a delimiter.
+=TEXTJOIN(", ", TRUE, A1:A5)
+
+Joins values from A1 to A5, separated by commas.
+UNIQUE → Returns unique values from a range.
+=UNIQUE(A1:A10)
+
+FILTER → Extracts data based on a condition.
+=FILTER(A2:A10, B2:B10>50)
+
+Returns values from A2:A10 where B2:B10 is greater than 50.
+SORT → Sorts data in ascending or descending order.
+=SORT(A2:A10, 1, TRUE) → Sorts A2:A10 in ascending order.
+
+SEQUENCE → Creates a series of numbers.
+=SEQUENCE(5,1,10,2)
+
+Creates 5 numbers starting from 10, with a step of 2 (10, 12, 14, 16, 18).
+RAND / RANDBETWEEN → Generates random numbers.
+
+=RAND() → Returns a random number between 0 and 1.
+=RANDBETWEEN(1, 100) → Returns a random number between 1 and 100.
+------------------------------------------------------------------------------------------------------------------
+📌 Bonus - Logical & Lookup Combinations
+Nested IF → Multiple conditions in one formula.
+=IF(A1>90, "A", IF(A1>80, "B", IF(A1>70, "C", "Fail")))
+
+INDEX + MATCH (Better than VLOOKUP)
+=INDEX(B2:B10, MATCH(101, A2:A10, 0))
+
+Finds 101 in column A and returns the corresponding value from column B.
+INDIRECT → Dynamically references a cell.
+=INDIRECT("A"&B1) → If B1 = 5, it refers to A5.

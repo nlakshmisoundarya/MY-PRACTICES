@@ -1,0 +1,124 @@
+Pandas Easy Documentation - All Functions in One
+
+=======================================================
+📌 1. Reading & Writing Data
+=======================================================
+| Function         | Description                           | Example |
+|-----------------|---------------------------------------|---------|
+| read_csv()      | Read CSV file into a DataFrame.      | df = pd.read_csv('file.csv') |
+| read_excel()    | Read Excel file into a DataFrame.    | df = pd.read_excel('file.xlsx') |
+| to_csv()        | Save DataFrame as a CSV file.       | df.to_csv('file.csv', index=False) |
+| to_excel()      | Save DataFrame as an Excel file.    | df.to_excel('file.xlsx', index=False) |
+
+=======================================================
+📌 2. Basic Data Exploration
+=======================================================
+| Function        | Description                          | Example |
+|---------------|--------------------------------------|---------|
+| head()        | Display first 5 rows.                | df.head(5) |
+| tail()        | Display last 5 rows.                 | df.tail(5) |
+| info()        | Get DataFrame info.                  | df.info() |
+| describe()    | Show statistics for numerical cols.  | df.describe() |
+| shape        | Get row & column count.               | df.shape |
+| columns      | List all column names.                | df.columns |
+| dtypes       | Show column data types.               | df.dtypes |
+
+=======================================================
+📌 3. Handling Missing Data
+=======================================================
+| Function     | Description                         | Example |
+|-------------|-------------------------------------|---------|
+| isnull()    | Check for missing values.          | df.isnull().sum() |
+| fillna()    | Fill missing values.               | df.fillna(0) |
+| dropna()    | Remove rows with missing values.   | df.dropna() |
+
+=======================================================
+📌 4. Selecting & Filtering Data
+=======================================================
+| Function     | Description                         | Example |
+|-------------|-------------------------------------|---------|
+| loc[]       | Select data by label.              | df.loc[df['Type'] == 'Grass'] |
+| iloc[]      | Select data by position.           | df.iloc[0:5, 1:3] |
+
+=======================================================
+📌 5. Modifying Data
+=======================================================
+| Function       | Description                         | Example |
+|---------------|-------------------------------------|---------|
+| assign()      | Create new column.                 | df = df.assign(NewCol=df['OldCol'] * 2) |
+| drop()        | Delete rows/columns.               | df.drop(['Column'], axis=1) |
+| rename()      | Rename columns.                    | df.rename(columns={'Old': 'New'}) |
+| astype()      | Convert column data type.          | df['Column'] = df['Column'].astype(int) |
+| sort_values() | Sort DataFrame by column.          | df.sort_values('Column', ascending=False) |
+| replace()     | Replace specific values.           | df.replace({'OldValue': 'NewValue'}) |
+
+=======================================================
+📌 6. Grouping & Aggregations
+=======================================================
+| Function     | Description                         | Example |
+|-------------|-------------------------------------|---------|
+| groupby()   | Group and apply function.          | df.groupby('Category')['Value'].sum() |
+| agg()       | Apply multiple functions.          | df.agg({'Column': ['sum', 'mean']}) |
+| transform() | Transform grouped data.            | df['Norm'] = df.groupby('Category')['Value'].transform(lambda x: x / x.sum()) |
+
+=======================================================
+📌 7. Merging & Combining Data
+=======================================================
+| Function   | Description                         | Example |
+|-----------|-------------------------------------|---------|
+| merge()   | Merge DataFrames on a column.      | df = pd.merge(df1, df2, on='ID') |
+| concat()  | Concatenate DataFrames.            | df = pd.concat([df1, df2]) |
+
+=======================================================
+📌 8. Reshaping Data
+=======================================================
+| Function    | Description                          | Example |
+|------------|--------------------------------------|---------|
+| pivot()    | Reshape data by pivoting columns.    | df.pivot(index='ID', columns='Category', values='Value') |
+| melt()     | Convert wide to long format.        | df.melt(id_vars=['ID'], value_vars=['Score1', 'Score2']) |
+
+=======================================================
+📌 9. Applying Functions
+=======================================================
+| Function   | Description                         | Example |
+|-----------|-------------------------------------|---------|
+| apply()   | Apply function to rows/columns.    | df['NewCol'] = df['OldCol'].apply(lambda x: x * 2) |
+| map()     | Apply function to a Series.        | df['Category'] = df['Category'].map({'A': 1, 'B': 2}) |
+| applymap()| Apply function element-wise.       | df.applymap(lambda x: x.strip() if isinstance(x, str) else x) |
+
+=======================================================
+📌 10. Handling Duplicates
+=======================================================
+| Function         | Description                         | Example |
+|-----------------|-------------------------------------|---------|
+| duplicated()    | Check for duplicate rows.          | df.duplicated().sum() |
+| drop_duplicates() | Remove duplicate rows.          | df.drop_duplicates() |
+
+=======================================================
+📌 11. Statistics & Analysis
+=======================================================
+| Function    | Description                         | Example |
+|------------|-------------------------------------|---------|
+| value_counts() | Count unique values.          | df['Category'].value_counts() |
+| nunique()   | Count unique values per column.   | df.nunique() |
+| corr()      | Compute correlation matrix.       | df.corr() |
+
+=======================================================
+📌 12. Working with Index
+=======================================================
+| Function      | Description                         | Example |
+|--------------|-------------------------------------|---------|
+| set_index()  | Set column as index.               | df.set_index('ID') |
+| reset_index()| Reset index to default.            | df.reset_index() |
+
+=======================================================
+📌 13. Working with Lists
+=======================================================
+| Function   | Description                         | Example |
+|-----------|-------------------------------------|---------|
+| explode() | Split lists into separate rows.    | df.explode('Column') |
+
+=======================================================
+✅ END OF DOCUMENTATION ✅
+=======================================================
+

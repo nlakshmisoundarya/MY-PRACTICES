@@ -1,0 +1,96 @@
+📌 Basic DAX Formulas
+SUM → Adds up all the values in a column.
+Example: =SUM(Sales[Amount])
+
+AVERAGE → Finds the average of values in a column.
+Example: =AVERAGE(Sales[Amount])
+
+MIN → Finds the minimum value in a column.
+Example: =MIN(Sales[Amount])
+
+MAX → Finds the maximum value in a column.
+Example: =MAX(Sales[Amount])
+
+COUNTROWS → Counts the number of rows in a table.
+Example: =COUNTROWS(Sales)
+------------------------------------------------------------------------------------------------------------------
+📌 Intermediate DAX Formulas
+CALCULATE → Changes context in a calculation.
+Example: =CALCULATE(SUM(Sales[Amount]), Sales[Region] = 'East')
+
+FILTER → Returns a table with rows filtered by a given condition.
+Example: =FILTER(Sales, Sales[Amount] > 1000)
+
+ALL → Removes all filters from a table.
+Example: =ALL(Sales)
+
+ALLEXCEPT → Removes all filters except the ones specified.
+Example: =ALLEXCEPT(Sales, Sales[Region])
+
+RELATED → Returns a related value from another table.
+Example: =RELATED(Customer[Name])
+
+IF → Applies a condition and returns one result if true, and another if false.
+Example: =IF(Sales[Amount] > 1000, 'High', 'Low')
+
+SWITCH → Evaluates an expression for multiple conditions.
+Example: =SWITCH(Sales[Amount], 1, 'Low', 2, 'Medium', 3, 'High')
+
+AND → Returns TRUE if all arguments are TRUE.
+Example: =AND(Sales[Amount] > 1000, Sales[Region] = 'East')
+
+OR → Returns TRUE if any argument is TRUE.
+Example: =OR(Sales[Amount] > 1000, Sales[Region] = 'East')
+
+NOT → Returns the negation of a logical value.
+Example: =NOT(Sales[Amount] > 1000)
+------------------------------------------------------------------------------------------------------------------
+📌 Advanced DAX Formulas
+RANKX → Ranks items in a column based on a specified expression.
+Example: =RANKX(Sales, Sales[Amount])
+
+DISTINCT → Returns distinct values from a column.
+Example: =DISTINCT(Sales[Region])
+
+VALUES → Returns unique values for the specified column.
+Example: =VALUES(Sales[Region])
+
+EARLIER → Uses the result of a row context in another row context.
+Example: =EARLIER(Sales[Amount])
+
+ISBLANK → Checks if a value is blank.
+Example: =ISBLANK(Sales[Amount])
+
+LOOKUPVALUE → Looks up a value in another table based on matching columns.
+Example: =LOOKUPVALUE(Customer[Name], Customer[ID], Sales[CustomerID])
+
+RELATEDTABLE → Returns a table related to the current table.
+Example: =RELATEDTABLE(Customer)
+
+ALLSELECTED → Returns all selected values of a column in the current context.
+Example: =ALLSELECTED(Sales[Region])
+
+HASONEVALUE → Returns TRUE if there is only one value in the column.
+Example: =HASONEVALUE(Sales[Region])
+
+REMOVEFILTERS → Removes filters from a table or column.
+Example: =REMOVEFILTERS(Sales)
+
+TOTALYTD → Calculates year-to-date (YTD) totals.
+Example: =TOTALYTD(SUM(Sales[Amount]), Sales[Date])
+
+TOTALMTD → Calculates month-to-date (MTD) totals.
+Example: =TOTALMTD(SUM(Sales[Amount]), Sales[Date])
+
+TOTALQTD → Calculates quarter-to-date (QTD) totals.
+Example: =TOTALQTD(SUM(Sales[Amount]), Sales[Date])
+------------------------------------------------------------------------------------------------------------------
+📌 Bonus DAX Formulas
+Nested IF → Applies multiple IF conditions within a single formula.
+Example: =IF(Sales[Amount] > 1000, 'High', IF(Sales[Amount] > 500, 'Medium', 'Low'))
+
+INDEX + MATCH → A combination that works better than VLOOKUP.
+Example: =INDEX(Sales[Amount], MATCH('East', Sales[Region], 0))
+
+EARLIER → Refers to the earlier row context within a formula.
+Example: =EARLIER(Sales[Amount])

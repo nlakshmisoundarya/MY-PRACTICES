@@ -1,0 +1,149 @@
+📊 1. Column Chart
+Shows: Vertical bars comparing values across categories.
+Use when: Comparing categories side by side.
+Data Type: Categorical (x-axis) + Numeric (y-axis)
+✅ E.g., Sales by region, revenue by product
+
+📊 2. Bar Chart
+Shows: Horizontal bars for easier comparison when labels are long.
+Use when: Comparing values across many categories.
+Data Type: Categorical (y-axis) + Numeric (x-axis)
+✅ E.g., Survey results, product popularity
+
+📈 3. Line Chart
+Shows: Trends over time with connected data points.
+Use when: Showing changes over time.
+Data Type: Date/time (x-axis) + Numeric (y-axis)
+✅ E.g., Website traffic over months, sales over weeks
+
+📉 4. Area Chart
+Shows: Like a line chart but shaded below the line.
+Use when: Showing cumulative trend or volume.
+Data Type: Time series + Numeric
+✅ E.g., Cumulative sales, stock price trends
+
+📉 5. Stacked Area Chart
+Shows: Area chart broken down by category.
+Use when: Comparing parts of a whole over time.
+Data Type: Time series + Category + Numeric
+✅ E.g., Product-wise revenue over months
+
+📊 6. Stacked Column/Bar Chart
+Shows: Total value and sub-category breakdown.
+Use when: Comparing totals and parts.
+Data Type: Category + Subcategory + Numeric
+✅ E.g., Expenses by department and category
+
+🥧 7. Pie Chart
+Shows: Percent share of each category in a whole.
+Use when: Comparing parts of a whole (100%).
+Data Type: Categories + Single numeric value
+✅ E.g., Market share, budget distribution
+
+🍩 8. Donut Chart
+Shows: A pie chart with a hole in the center.
+Use when: Same as pie chart, but with optional label in the center.
+Data Type: Categories + Single numeric value
+✅ E.g., Department budget % share
+
+📍 9. Scatter Plot
+Shows: Individual data points for 2 variables.
+Use when: Finding relationships or correlation.
+Data Type: Two numeric variables
+✅ E.g., Height vs weight, study hours vs scores
+
+🔁 10. Bubble Chart
+Shows: Like scatter plot, but size of bubble = 3rd variable.
+Use when: Comparing 3 variables at once.
+Data Type: 3 numeric variables (x, y, size)
+✅ E.g., Sales vs profit vs market size
+
+📊 11. Histogram
+Shows: Distribution of data into bins.
+Use when: Showing frequency of data ranges.
+Data Type: One numeric variable
+✅ E.g., Test scores, age distribution
+
+📦 12. Box and Whisker Plot
+Shows: Data spread with median, quartiles, outliers.
+Use when: Summarizing distribution and variation.
+Data Type: Numeric variable grouped by categories
+✅ E.g., Salary by department, grades by class
+
+📉 13. Waterfall Chart
+Shows: Sequential increases/decreases in value.
+Use when: Explaining how a start value turns into an end value.
+Data Type: Category + numeric values (with positive/negative steps)
+✅ E.g., Profit breakdown, budget to actual
+
+🌐 14. Map Chart
+Shows: Data geographically.
+Use when: You have location-based data.
+Data Type: Location names + Numeric
+✅ E.g., Sales by country, COVID cases by state
+
+🌞 15. Treemap
+Shows: Hierarchical data with nested rectangles.
+Use when: Comparing parts of a whole within hierarchy.
+Data Type: Hierarchy (parent/child) + Numeric
+✅ E.g., Revenue by region and product
+
+☀️ 16. Sunburst Chart
+Shows: Hierarchical data in a radial (circular) layout.
+Use when: Showing levels within data.
+Data Type: Multi-level categories + numeric
+✅ E.g., Company → Departments → Teams → Budget
+
+🧮 17. Combo Chart (Line + Column)
+Shows: Multiple data series with different visualizations.
+Use when: Comparing different types of values together.
+Data Type: Categories + 2+ numeric series
+✅ E.g., Sales (column) + growth rate (line)
+
+✨ 18. Sparklines
+Shows: Tiny charts within a single cell that show trends, patterns, or fluctuations over time.
+Use when: You want a compact visual summary of data in a table or row.
+Types:
+
+Line Sparkline – Shows trends
+
+Column Sparkline – Compares values
+
+Win/Loss Sparkline – Shows positives vs negatives
+Data Type: Time-series or sequential numeric data
+✅ E.g., Sales over 12 months per region (in one row per region)
+
+19. Funnel Chart
+Shows: Progress through stages (top to bottom)
+Use when: Visualizing drop-off between steps (like sales pipeline, conversion funnel)
+Data Type: Category + Numeric (ordered stages)
+✅ E.g., Website visits → signups → purchases
+
+20. Gauge / KPI Chart (Power BI mostly)
+Shows: Current performance vs target
+Use when: Displaying one key metric with status
+Data Type: Numeric value + target
+✅ E.g., Actual sales vs target
+
+21. Ribbon Chart (Power BI only)
+Shows: Ranks and changes over time
+Use when: Comparing category performance shifts
+Data Type: Category + Time + Value
+✅ E.g., Market leader positions month over month
+
+22. Decomposition Tree *(Power BI only)
+Shows: Hierarchical breakdown of a metric
+Use when: Exploring how a value is built (drill down)
+Data Type: Numeric measure + multiple dimensions
+✅ E.g., Total profit → by country → by product → by region
+
+23. Matrix / Table (visuals)
+Shows: Detailed values with optional subtotals
+Use when: Displaying structured data with drill-down
+Data Type: Categories + values
+✅ E.g., Sales by Region and Product in tabular form
+
+24. Scatter with Lines / Smooth Lines
+Shows: Same as scatter but connects points in order
+Use when: Scatter + sequence trends
+Data Type: Two numeric values + order/time (optional)

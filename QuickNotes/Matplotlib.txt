@@ -1,0 +1,114 @@
+📌 Basic Matplotlib Functions
+plt.plot() → Plots data points on a 2D line plot.
+Example: plt.plot([1, 2, 3], [4, 5, 6])
+
+plt.scatter() → Creates a scatter plot for individual data points.
+Example: plt.scatter([1, 2, 3], [4, 5, 6])
+
+plt.bar() → Creates a bar plot.
+Example: plt.bar([1, 2, 3], [4, 5, 6])
+
+plt.hist() → Creates a histogram for data distribution.
+Example: plt.hist([1, 2, 2, 3, 3, 3])
+
+plt.boxplot() → Creates a box plot to visualize data distribution.
+Example: plt.boxplot([1, 2, 3, 4, 5])
+
+plt.pie() → Creates a pie chart to display proportions.
+Example: plt.pie([10, 20, 30])
+
+plt.xlabel() → Adds a label to the x-axis.
+Example: plt.xlabel('X Axis')
+
+plt.ylabel() → Adds a label to the y-axis.
+Example: plt.ylabel('Y Axis')
+
+plt.title() → Adds a title to the plot.
+Example: plt.title('Plot Title')
+
+plt.grid() → Adds a grid to the plot.
+Example: plt.grid(True)
+------------------------------------------------------------------------------------------------------------------
+📌 Intermediate Matplotlib Functions
+plt.legend() → Adds a legend to the plot.
+Example: plt.legend(['Line 1', 'Line 2'])
+
+plt.xlim() → Sets the limits for the x-axis.
+Example: plt.xlim(0, 10)
+
+plt.ylim() → Sets the limits for the y-axis.
+Example: plt.ylim(0, 10)
+
+plt.axhline() → Draws a horizontal line across the plot.
+Example: plt.axhline(y=0, color='r', linestyle='-')
+
+plt.axvline() → Draws a vertical line across the plot.
+Example: plt.axvline(x=0, color='r', linestyle='--')
+
+plt.subplot() → Creates multiple subplots in one figure.
+Example: plt.subplot(2, 2, 1)
+
+plt.fill() → Fills the area under the curve or between points.
+Example: plt.fill([1, 2, 3], [4, 5, 6], color='blue', alpha=0.5)
+
+plt.annotate() → Adds annotations to specific data points.
+Example: plt.annotate('Point A', xy=(2, 3), xytext=(3, 5), arrowprops=dict(facecolor='red'))
+
+plt.tight_layout() → Adjusts subplots to fit the figure area.
+Example: plt.tight_layout()
+
+plt.savefig() → Saves the plot as an image (PNG, PDF, etc.).
+Example: plt.savefig('plot.png')
+------------------------------------------------------------------------------------------------------------------
+📌 Advanced Matplotlib Functions
+plt.subplot2grid() → Places subplots in a specific grid position.
+Example: plt.subplot2grid((2, 2), (0, 0))
+
+plt.errorbar() → Creates a plot with error bars.
+Example: plt.errorbar([1, 2, 3], [4, 5, 6], yerr=0.1)
+
+plt.fill_between() → Fills the area between two horizontal curves.
+Example: plt.fill_between([1, 2, 3], [1, 2, 3], [4, 5, 6])
+
+plt.hexbin() → Creates a hexagonal binning plot for 2D data.
+Example: plt.hexbin(x, y, gridsize=30)
+
+plt.imshow() → Displays an image or 2D array as an image.
+Example: plt.imshow(image_data)
+
+plt.streamplot() → Creates a stream plot to visualize vector fields.
+Example: plt.streamplot(x, y, u, v)
+
+plt.contour() → Creates contour plots (like a topographic map).
+Example: plt.contour(X, Y, Z)
+
+plt.contourf() → Creates filled contour plots.
+Example: plt.contourf(X, Y, Z)
+
+plt.scatter3D() → Creates a 3D scatter plot.
+Example: plt.scatter3D(x, y, z)
+
+plt.plot_date() → Creates a plot for dates.
+Example: plt.plot_date(dates, values)
+------------------------------------------------------------------------------------------------------------------
+📌 Bonus Matplotlib Functions
+plt.xticks() → Sets the x-axis tick positions and labels.
+Example: plt.xticks([1, 2, 3], ['A', 'B', 'C'])
+
+plt.yticks() → Sets the y-axis tick positions and labels.
+Example: plt.yticks([1, 2, 3], ['One', 'Two', 'Three'])
+
+plt.subplots_adjust() → Adjusts the subplot positions and spacing.
+Example: plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+
+plt.text() → Adds text at a specific position on the plot.
+Example: plt.text(2, 5, 'Text Here', fontsize=12)
+
+plt.vlines() → Draws vertical lines at specified x-positions.
+Example: plt.vlines([2, 3], ymin=0, ymax=10)
+
+plt.hlines() → Draws horizontal lines at specified y-positions.
+Example: plt.hlines([2, 3], xmin=0, xmax=10)
+
+plt.imshow() → Displays a 2D array as an image (useful for visualizing matrices).
+Example: plt.imshow(array, cmap='hot')
